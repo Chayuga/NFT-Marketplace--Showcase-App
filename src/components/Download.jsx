@@ -4,6 +4,9 @@ import styles from '../styles/Global';
 import assets from '../assets';
 
 const Download = () => {
+  const gitHubRepo =
+    'https://github.com/Chayuga/React-Native-App---NFT-Marketplace';
+
   return (
     <div className={`${styles.section} ${styles.bgWhite}`}>
       <div className={`${styles.subSection} flex-col text-center`}>
@@ -15,8 +18,12 @@ const Download = () => {
             Get the full source code on GitHub
           </p>
         </div>
-        {/* TODO: add link to github repo */}
-        <button className={styles.btnPrimary}>Source Code</button>
+        <button
+          onClick={() => window.open(gitHubRepo, '_blank')}
+          className={styles.btnPrimary}
+        >
+          Source Code
+        </button>
         <div className={styles.flexCenter}>
           <img
             src={assets.scene}
